@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <meta charset=utf-8>
+  <title>Final Project</title>
+  <link type="text/css" rel="stylesheet" href="css/styles.css" />
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+<!--Google Fonts Start Here-->
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<!--Google Fonts End-->
+</head>
+
+<body>
+
+<!--Header Start-->
+<div class="header">
+	<h1>Final Project</h1>
+</div>
+<!--Header End-->
+
+<!--Navigation bar start-->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="story.html">Interactive Story</a>
+  <a href="project.html">Final Project</a>
+</nav>
+<!--Navigation bar end-->
+
+<div class="heading1">
+	<h2>Final Project for DH 520</h2>
+</div>
+
+<div class="subheading">
+	<h3>More information coming this spring</h3>
+</div>
+
+<div id="buttons">
+	<!--Selection Check Boxes-->
+	<div id=checkboxes>
+		<label for="al">American League </label>
+			<input type="checkbox" id="al" name="al" checked><br>
+		<label for="nl">National League </label>
+			<input type="checkbox" id="nl" name="nl" checked>
+	</div>
+	<!--Select a Dataset-->
+	<div id=dataset>
+		<select id=filename name=filename>
+			<option value="" selected>Choose a dataset:</option>
+			<option value="batting_2019.csv">2019</option>
+			<option value="batting_2018.csv">2018</option>
+			<option value="homeruns_2017.csv">2017</option>
+		</select>
+	</div>
+</div>
+
+<svg></svg>
+
+<p>This is a placeholder for my final project.</p>
+
+</body>
+
+<script src="js/library.js"></script>
+
+</html>

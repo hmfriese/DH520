@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <meta charset=utf-8>
+  <title>Final Project</title>
+  <link type="text/css" rel="stylesheet" href="css/styles.css" />
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+<!--Google Fonts Start Here-->
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<!--Google Fonts End-->
+</head>
+
+<body>
+
+<!--Header Start-->
+<div class="header">
+  <h1>Final Project: Visualising WAR and Salary for MLB Players</h1>
+</div>
+<!--Header End-->
+
+<!--Navigation bar start-->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="story.html">Interactive Story</a>
+  <a href="project.html">Final Project</a>
+</nav>
+<!--Navigation bar end-->
+
+<div class="heading1">
+  <h2>Wins Above Replacement and Salary for Major League Baseball Players, 2016-2019</h2>
+</div>
+
+<div class="datavizheader"><header>
+  <h2>WAR and Salary for MLB Players by Position</h2>
+</header></div>
+
+<div id="buttons">
+  <div id=checkboxes>
+    <!--Final Version Labels, There should be 10-->
+    <ul>
+    <li><label for="sp">P </label>
+      <input type="checkbox" id="sp" name="sp" checked></li>
+    <li><label for="SS">SS </label>
+      <input type="checkbox" id="ss" name="ss" checked></li>
+    <li><label for="c">C </label>
+      <input type="checkbox" id="c" name="c" checked></li>
+    <li><label for="lf">LF </label>
+      <input type="checkbox" id="lf" name="lf" checked></li>
+    <li><label for="b1">1B </label>
+      <input type="checkbox" id="b1" name="b1" checked></li>
+    <li><label for="cf">CF </label>
+      <input type="checkbox" id="cf" name="cf" checked></li>
+    <li><label for="b2">2B </label>
+      <input type="checkbox" id="b2" name="b2" checked></li>
+    <li><label for="rf">RF </label>
+      <input type="checkbox" id="rf" name="rf" checked></li>
+    <li><label for="b3">3B </label>
+      <input type="checkbox" id="b3" name="b3" checked></li>
+    <li><label for="dh">DH </label>
+      <input type="checkbox" id="dh" name="dh" checked></li>
+    </ul>
+  </div><!-- checkboxes -->
+  <div id=dataset>
+    <select id=filename name=filename>
+      <option value="" selected>Choose a season:</option>
+      <option value="war_2019.csv">2019 Season</option>
+      <option value="war_2018.csv">2018 Season</option>
+      <option value="war_2017.csv">2017 Season</option>
+      <option value="war_2016.csv">2016 Season</option>
+    </select>
+  </div><!-- dataset -->
+</div><!-- buttons -->
+
+<svg></svg>
+
+<div class="subheading">
+  <h2>Key</h2>
+</div>
+
+<ul class="key">
+    <li><span class="p"></span> P - Pitcher</li>
+    <li><span class="c"></span> C - Catcher</li>
+    <li><span class="b1"></span> 1B - First Base</li>
+    <li><span class="b2"></span> 2B - Second Base</li>
+    <li><span class="b3"></span> 3B - Third Base</li>
+    <li><span class="ss"></span> SS - Short Stop</li>
+    <li><span class="lf"></span> LF - Left Field</li>
+    <li><span class="cf"></span> CF - Center Field</li>
+    <li><span class="rf"></span> RF - Right Field</li>
+    <li><span class="dh"></span> DH - Designated Hitter</li>
+</ul>
+
+<div class="subheading">
+  <h2>A Brief Explanation of WAR</h2>
+</div>
+
+<p>Wins Above Replacement (WAR) is "<a href="https://library.fangraphs.com/misc/war/">...an attempt by the sabermetric baseball community to summarize a player's total contributions to their team in one statistic</a>" (Slowinski, 2010). WAR acts as an easy statistic that encapsulates what a player contributes to their team. WAR is calculated using different metrics for pitchers and position players but each are attempts to place a numbered value on any given player. In theory, if WAR measures how many wins a player will contribute to their team then annual player salary should rise alongside WAR.</p>
+
+<div class="subheading">
+  <h2>A Note on Player Salaries</h2>
+</div>
+
+<p>In the MLB there are three phases of player salary negotiations, all of which are dependent on a player's Service Time. The first is League Minimum, where players are signed to short-term, low value contracts. For the time-span considered here the league minimum was $535,000-$555,000 (MLB Player's Association, 2017). League Minimum covers the first three years of a player's Major League career. Once a player has accrued three years of Service Time they become arbitration eligible where they may negotiate their salary with their team. Arbritration typically covers years 3-6 of service time for a player. A player under arbitration is only permitted  to negotiate salaries and contracts with the team that they already have a contract with (MLB Player's Association, 2017). There is no league maximum salary during arbitration. However, theoretically by the time a player reaches arbitration their net value to their team should have increased with experience and therefore they should be offered a higher salary. Once a player has reached six years of Service Time they become eligible for free agency where they are free to negotiate salary and contracts with any team across the Major Leagues (Brown, 2016).</p>
+
+<p>It should be noted that this is a highly simplified explanation of how player salaries are negotiated and determined. In practice the salary negotiation process is highly regulated by the MLB Collective Bargaining Agreement and features many minutiae.</p>
+
+<div class="subheading">
+  <h2>References</h2>
+</div>
+
+<p>MLB Player's Association (2017). <em>Collective Bargaining Agreement</em>. Retrieved from <a href="https://d39ba378-ae47-4003-86d3-147e4fa6e51b.filesusr.com/ugd/b0a4c2_95883690627349e0a5203f61b93715b5.pdf">https://www.mlbplayers.com/cba</a>.</p>
+<p>Brown, M. (2016). Breaking Down MLB's New 2017-21 Collective Bargaining Agreement. <em>Forbes</em>. Retrieved from <a href="https://www.forbes.com/sites/maurybrown/2016/11/30/breaking-down-mlbs-new-2017-21-collective-bargaining-agreement/#3493064711b9">https://www.forbes.com/sites/maurybrown/2016/11/30/breaking-down-mlbs-new-2017-21-collective-bargaining-agreement/#3493064711b9</a></p>
+<p>Slowinski, S. (2010). What is WAR? <em>FanGraphs</em>. Retrieved from <a href="https://library.fangraphs.com/misc/war/">https://library.fangraphs.com/misc/war/</a></p>
+
+<div class="subheading">
+  <h2>Original Datasets</h2>
+</div>
+
+<p>The data for this project made use of the two following sources:</p>
+
+<p>Original Dataset for position player WAR: FanGraphs (n.d.). Batting Leaderboards. [data collection]. Retrieved from <a href="https://www.fangraphs.com/leaders.aspx?pos=all&stats=bat&lg=all&qual=y&type=8&season=2019&month=0&season1=2019&ind=0">https://www.fangraphs.com/leaders.aspx?pos=all&stats=bat&lg=all&qual=y&type=8&season=2019&month=0&season1=2019&ind=0</a></p>
+<p>Original Dataset for pitcher WAR: FanGraphs (n.d.). Pitching Leaderboards. [data collection]. Retrieved from <a href="https://www.fangraphs.com/leaders.aspx?pos=all&stats=pit&lg=all&qual=y&type=8&season=2019&month=0&season1=2019&ind=0">https://www.fangraphs.com/leaders.aspx?pos=all&stats=pit&lg=all&qual=y&type=8&season=2019&month=0&season1=2019&ind=0</a></p>
+<p>Original Dataset for player position and salary: USA Today (n.d.). MLB Salaries. Retrieved from <a href="https://www.usatoday.com/sports/mlb/salaries/2019/player/all/">https://www.usatoday.com/sports/mlb/salaries/2019/player/all/</a></p>
+
+</body>
+
+<script src="js/library.js"></script>
+
+</html>
