@@ -1,69 +1,334 @@
-/*
-  CSS for DH 520 Pages.
-*/
-
-/*
-  Colour palette tentatively chosen: #AoA5B8, #242038, #8AA1b1, #9ac2c9,
-  #e8f7ee
-
-/**************************************************************
-*
-*   Big Containers
-*
-**************************************************************/
+/****************
+Big containers
+*****************/
 
 body {
-  background-color: #FCFAFA;
-  color: #242038;
-  padding: 2.5em;
-  padding-top: 0.3em;
-  line-height: 1.6em;
-  font-family: 'Georgia', serif;
+	font-size: 100%;
+	line-height: 1.7;
+	background-color: #FFF;
+	color: #303036;
 }
 
-a{
-  text-decoration: none;
+p {
+	text-indent: 50px;
+	color: #303036;
+	padding-left: 27%;
+	padding-right: 27%;
+	font-size: 15px;
 }
 
-/**************************************************************
-*
-*   Navigation CSS
-*
-**************************************************************/
-
-nav {
-  display: inline-block;
-  border: 1px solid #666;
-  padding: 1em;
-  margin-left: 0.5em;
-  margin-right: 2.5em;
-  margin-bottom: 1em;
-  font-family: Verdana, sans-serif;
-  background-color: #97AFB9
+a {
+	color: #303036;
 }
 
-nav:link{
-  color: #242038;
+/*****************
+Page title header
+******************/
+
+.header{
+	width: 100%;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	text-align: center;
+	background-color: #303036;
+	color: #FFF;
+	font-size: 20px;
+	font-family: 'Playfair display', serif;
 }
 
-nav:visited{
-  color: #242038;
+/*****************
+Navigation Bar
+******************/
+
+nav{
+	width: 100%;
+	background-color: #D6E2E9;
 }
 
 nav a {
-  display: inline-block;
-  margin-right: 2.5em;
-  text-decoration: none;
+	display: inline-block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.0em;
+	color: #303036;
+	background-color: #D6E2E9;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	text-decoration: none;
 }
 
-/**************************************************************
-*
-*   Images, etc
-*
-**************************************************************/
+nav a:visited{
+	text-decoration: none;
+	color: #303036;
+}
 
-Img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+nav a:hover {
+	background-color: #FFF;
+}
+
+/*****************
+Paragraph Headings
+******************/
+
+.heading1{
+	margin: 0.5em 0 0.5em 0;
+	padding-left: 27%;
+	padding-right: 27%;
+	color: #303036;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+}
+
+.subheading{
+	margin: 0.5em 0 0.5em 0;
+	padding-left: 27%;
+	color: #303036;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+}
+
+
+
+
+/****************
+Images--Home Page
+*****************/
+.profile img{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	max-width: 45%;
+	height: auto;
+}
+
+.fig img{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	max-width: 45%;
+	height: auto;
+}
+
+/***********************
+Interactive Story Design
+***********************/
+
+.story-box {
+	margin-left: 27%;
+	margin-right: 27%;
+	margin-bottom: 15%;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 5px;
+	color: #303036;
+	background-color: #D6E2E9;
+}
+
+.button-grid {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	gap: 20px;
+	margin-top: 20px;
+}
+
+button {
+	background-color: #FFF;
+	border-radius: 5px;
+	padding: 5px 10px;
+	color: #303036;
+	outline: none;
+}
+
+.button:hover {
+	border-color: black;
+}
+
+/***********************
+Data Viz Project
+***********************/
+
+svg {
+	display: block;
+	height: 500px;
+	width: 750px;
+	background-color: #d6e2e9;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+/***********************
+Data Viz title (the slide box, not the words)
+***********************/
+header {
+	width: 750px;
+	height: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 0.35em;
+	background: #303036;
+}
+
+/***********************
+Data Viz title (the words not the slide)
+***********************/
+.datavizheader {
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+}
+
+/***********************
+Data Viz Checkboxes and data selection area
+(Kind of the top of the chart)
+***********************/
+div#buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #C4CCD1;
+	min-height: 60px;
+}
+
+div#checkboxes {
+	flex: 50%;
+	text-align: center;
+	padding-top: 0.7em;
+	padding-right: 20%;
+}
+
+/*Sets up the checkboxes in a grid*/
+
+ul {
+	margin: 0 auto;
+	text-align: center;
+	columns: 6;
+}
+
+li{
+	display: inline-block;
+	vertical-align: top;
+}
+
+div#dataset {
+	flex: 50%;
+	padding-top: 1.3em;
+}
+
+/***********************
+This draws the circles
+***********************/
+circle {
+	r: 5.5;
+	/*****consider changing below make data points more visible?**/
+	stroke: #36413e;
+}
+
+.SP {
+	fill: #1d7874;
+}
+
+.C {
+	fill: #354b4e;
+}
+
+.B1 {
+	fill: #111344;
+}
+
+.B2 {
+	fill: #52154e;
+}
+
+.B3 {
+	fill: #f9cff2;
+}
+
+.SS {
+	fill: #c7781e;
+}
+
+.LF {
+	fill: #f3d79c;
+}
+
+.CF {
+	fill: #acbed8;
+}
+
+.RF {
+	fill: #de1a1a;
+}
+
+.DH {
+	fill: #4392f1;
+}
+
+/***Show no markers when checkboxes unticked***/
+.invisible {
+	display: none;
+}
+
+/***********************
+Key list with colours
+***********************/
+.key { 
+	list-style: none;
+	margin-left: 27%; 
+	padding: 12px; 
+	text-align: center;
+	columns: 8;
+}
+.key li { 
+	display: inline-block;
+	vertical-align: top;
+	padding: 12px
+}
+.key span {
+	border: 1px solid #ccc; 
+	float: left; 
+	width: 12px; 
+	height: 12px; 
+	margin: 2px; }
+
+.key .p {
+	background-color: #1d7874;
+}
+.key .c {
+	background-color: #354b4e;
+}
+.key .b1 {
+	background-color: #111344;
+}
+.key .b2 {
+	background-color: #52154e;
+}
+.key .b3 {
+	background-color: #f9cff2;
+}
+.key .ss {
+	background-color: #c7781e;
+}
+.key .lf {
+	background-color: #f3d79c;
+}
+.key .cf {
+	background-color: #acbed8;
+}
+.key .rf {
+	background-color: #de1a1a;
+}
+.key .dh {
+	background-color: #4392f1;
 }
