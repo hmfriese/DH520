@@ -5,7 +5,7 @@ Big containers
 body {
 	font-size: 100%;
 	line-height: 1.7;
-	background-color: #FFF;
+	background-color: #F7F7F7;
 	color: #303036;
 }
 
@@ -31,7 +31,7 @@ Page title header
 	padding-bottom: 35px;
 	text-align: center;
 	background-color: #303036;
-	color: #FFF;
+	color: #F7F7F7;
 	font-size: 20px;
 	font-family: 'Playfair display', serif;
 }
@@ -64,7 +64,7 @@ nav a:visited{
 }
 
 nav a:hover {
-	background-color: #FFF;
+	background-color: #F7F7F7;
 }
 
 /*placeholder flag because this isn't working withouth !important!*/
