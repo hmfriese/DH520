@@ -67,6 +67,10 @@ nav a:hover {
 	background-color: #FFF;
 }
 
+/*placeholder flag because this isn't working withouth !important!*/
+.current{
+	background-color: #f7f7f7 !important;
+}
 /*****************
 Paragraph Headings
 ******************/
