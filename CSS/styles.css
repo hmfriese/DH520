@@ -1,0 +1,69 @@
+/*
+  CSS for DH 520 Pages.
+*/
+
+/*
+  Colour palette tentatively chosen: #AoA5B8, #242038, #8AA1b1, #9ac2c9,
+  #e8f7ee
+
+/**************************************************************
+*
+*   Big Containers
+*
+**************************************************************/
+
+body {
+  background-color: #FCFAFA;
+  color: #242038;
+  padding: 2.5em;
+  padding-top: 0.3em;
+  line-height: 1.6em;
+  font-family: 'Georgia', serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+/**************************************************************
+*
+*   Navigation CSS
+*
+**************************************************************/
+
+nav {
+  display: inline-block;
+  border: 1px solid #666;
+  padding: 1em;
+  margin-left: 0.5em;
+  margin-right: 2.5em;
+  margin-bottom: 1em;
+  font-family: Verdana, sans-serif;
+  background-color: #97AFB9
+}
+
+nav:link{
+  color: #242038;
+}
+
+nav:visited{
+  color: #242038;
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 2.5em;
+  text-decoration: none;
+}
+
+/**************************************************************
+*
+*   Images, etc
+*
+**************************************************************/
+
+Img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
