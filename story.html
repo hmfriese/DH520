@@ -4,21 +4,52 @@
 <head>
   <meta charset=utf-8>
   <title>Interactive Story</title>
-  <link type="text/css" rel="stylesheet" href="css/styles.css" />
+  <link type="text/css" rel="stylesheet" href="CSS/styles.css" />
+<!--Google Fonts Start Here-->
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<!--Google Fonts End-->
+	<script defer src="js/game.js"></script>
+	<script src="http://d3js.org/d3.v5.min.js"></script>
 </head>
 
 <body>
 
+<!--Header Start-->
+<div class="header">
+	<h1>Interactive Story</h1>
+</div>
+<!--Header End-->
+
+<!--Navigation Bar Start-->
 <nav>
   <a href="index.html">Home</a>
   <a href="story.html">Interactive Story</a>
   <a href="project.html">Final Project</a>
-  <a href="fig.html">Fig</a>
 </nav>
+<!--Navigation Bar End-->
 
-<p>This is a placeholder for an Interactive Story</p>
+<div class="heading1">
+	<h2>Interactive Story Assignment</h2>
+</div>
+
+<div class="subheading">
+	<h3>A trip to the grocery store</h3>
+</div>
+
+<p>This is an interactive story about a trip to the grocery store! Make your first decision below and see where it takes you.</p>
+
+	<div class="story-box">
+		<div id="text"><p>Text</p></div>
+		<div id="option-buttons" class="button-grid">
+		<button class="button">Option 1</button>
+		<button class="button">Option 2</button>
+		<button class="button">Option 3</button>
+		<button class="button">Option 4</button>
+	</div>
+	</div>
 
 </body>
-
 
 </html>
