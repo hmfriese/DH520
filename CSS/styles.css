@@ -156,6 +156,19 @@ button {
 	border-color: black;
 }
 
+/************************
+Footer
+************************/
+.footer{
+	width: 100%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	text-align: center;
+	background-color: #182523; /*Background colour for footer only*/
+	font-size: 100%;
+	font-family: 'Open Sans', sans-serif; /*google font name goes in the ''*/
+}
+
 /***********************
 Data Viz Project
 ***********************/
@@ -335,17 +348,4 @@ Key list with colours
 }
 .key .dh {
 	background-color: #4392f1;
-}
-
-/************************
-Footer
-************************/
-.footer{
-	width: 100%;
-	padding-top: 2%;
-	padding-bottom: 2%;
-	text-align: center;
-	background-color: #182523; /*Background colour for footer only*/
-	font-size: 100%;
-	font-family: 'Open Sans', sans-serif; /*google font name goes in the ''*/
 }
